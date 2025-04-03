@@ -1,7 +1,7 @@
 package com.vsm.enroller;
 
 public class Course {
-	enum Courses {
+	public enum Courses {
 		BSIT,
 		BSCE,
 		BSEE,

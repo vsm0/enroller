@@ -7,7 +7,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Person {
-	enum Gender {
+	public enum Gender {
 		Male,
 		Female
 	}
