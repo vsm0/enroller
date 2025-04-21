@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 /**
  * Represents a person with basic information.
  */
-public class Person {
+public abstract class Person {
 	/**
 	 * Enum representing gender types.
 	 */
@@ -132,6 +132,11 @@ public class Person {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+
+	/**
+	 * Prints the person's role
+	 */
+	public abstract void showRole();
 
 	/**
 	 * Sets the person's email address if it matches the valid format.

@@ -6,7 +6,7 @@ import java.util.UUID;
 /**
  * Represents a student with course and academic information.
  */
-public class Student extends Person {
+public class Student extends Person implements Enrollee {
 	private UUID studentNumber;
 	private Courses course;
 	private int yearLevel;
@@ -46,6 +46,29 @@ public class Student extends Person {
 		this.studentNumber = UUID.randomUUID();
 		this.course = course;
 		this.yearLevel = yearLevel;
+	}
+
+	/**
+	 * Prints the students course and year
+	 */
+	public void showRole() {
+		System.out.printf("I am a student in %s, year %d\n", getCourseName(), getYearLevel());
+	}
+
+	/**
+	 * Gets the student course and year
+	 * @return The course and year as enrollment status
+	 */
+	public String getEnrollmentStatus() {
+		return String.format("Student #%d; %s, YR %d", getStudentNumber(), getCourseName(), getYearLevel());
+	}
+
+	/**
+	 * Gets the enrollee's unique id
+	 * @return The student number
+	 */
+	public int getEnrollmentID() {
+		return getStudentNumber();
 	}
 
 	/**
